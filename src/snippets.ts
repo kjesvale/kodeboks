@@ -24,8 +24,7 @@ const kortkomponentFlex = {
 </style>
 `,
     css: code`
-/* Dette er bare litt styling for å gjøre
-   eksempelet penere. */
+/* Dette er bare litt styling for å gjøre eksempelet penere. */
 body {
   margin: 1rem;
 }
@@ -72,8 +71,7 @@ const kortkomponentGrid = {
 </style>
 `,
     css: code`
-/* Dette er bare litt styling for å gjøre
-   eksempelet penere. */
+/* Dette er bare litt styling for å gjøre eksempelet penere. */
 body {
   margin: 1rem;
 }
