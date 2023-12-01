@@ -40,7 +40,7 @@ const SplitPanelLayout = ({ snippet, setSnippet, defaultLanguage, layout, height
                 <div className={css.panel + ' ' + css.rightPanel}>
                     <div role="tablist" className={css.tabButtons}>
                         <button aria-selected className={css.tabButton} role="tab">
-                            Resultat
+                            Result
                         </button>
                     </div>
                     <section role="tabpanel" className={css.tabPanel}>

@@ -47,7 +47,7 @@ const OnePanelLayout = ({ snippet, setSnippet, defaultLanguage }: Props) => {
                     role="tab"
                     onClick={onTabButtonClick('output')}
                 >
-                    Resultat
+                    Result
                 </button>
             </div>
             <section role="tabpanel" className={css.tabPanel}>
