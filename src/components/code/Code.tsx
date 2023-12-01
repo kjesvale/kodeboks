@@ -1,4 +1,4 @@
-import { ArrowsCirclepathIcon, MobileSmallIcon, MonitorIcon } from '@navikt/aksel-icons';
+import { ArrowsCirclepathIcon, SidebarLeftIcon } from '@navikt/aksel-icons';
 import { FunctionComponent, ReactNode, useState } from 'react';
 import * as css from './Code.module.css';
 import { Language } from './editor/Editor';
@@ -40,7 +40,7 @@ const Code: FunctionComponent<Props> = ({
                 <ActionButton
                     title="Toggle split layout"
                     onClick={onChangeLayoutClick}
-                    icon={splitLayout ? <MobileSmallIcon /> : <MonitorIcon />}
+                    icon={<SidebarLeftIcon />}
                 />
                 <ActionButton
                     title="Reset changes"
