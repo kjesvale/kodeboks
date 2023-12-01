@@ -1,0 +1,11 @@
+.output {
+    background: white;
+    border-radius: 0.25rem;
+    height: 100%;
+}
+
+.output iframe {
+    display: block;
+    border: none;
+    border-radius: 0.25rem;
+}

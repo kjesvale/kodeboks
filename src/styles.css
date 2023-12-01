@@ -1,0 +1,19 @@
+:root {
+    --font-stack-sans-serif: 'DIN OT', 'Calibre Light', Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}

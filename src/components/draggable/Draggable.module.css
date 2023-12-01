@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.isDragging > * {
+    /* Ignore mouse events inside children when resizing.
+       Prevents dragging from being interrupted inside iframes. */
+    pointer-events: none;
+
+    /* Disable text selection inside children when resizing. */
+    user-select: none;
+}
+
+.fullscreen {
+    height: 100%;
+    overflow: hidden;
+}
+
+.dividerContainer {
+    width: 1rem;
+    cursor: col-resize;
+    flex-shrink: 0;
+}
+
+.dividerContainer:hover {
+    background-color: hsl(0, 0%, 15%);
+}
+
+.divider {
+    width: 1px;
+    background-color: hsl(0, 0%, 20%);
+    margin: 0 auto;
+    height: 100%;
+}
