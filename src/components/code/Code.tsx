@@ -1,4 +1,4 @@
-import { FullscreenEnter, FullscreenExit, Reset } from '@navikt/ds-icons';
+import { Reset } from '@navikt/ds-icons';
 import { FunctionComponent, ReactNode, useState } from 'react';
 import Draggable from '../draggable/Draggable';
 import * as css from './Code.module.css';
@@ -26,35 +26,22 @@ const Code: FunctionComponent<Props> = ({
     ...props
 }) => {
     const [snippet, setSnippet] = useState<Snippet>(props.snippet);
-    const [fullscreen, setFullscreen] = useState<boolean>(false);
 
     const onResetClick = () => {
         setSnippet(props.snippet);
     };
 
-    const onFullscreenClick = () => {
-        setFullscreen(!fullscreen);
-    };
-
-    let cls = css.wrapper;
-    if (fullscreen) {
-        cls += ` ${css.fullscreen}`;
-    }
+    let cls = css.wrapper + ' ' + css.fullscreen;
 
     return (
         <div className={cls}>
             <header className={css.header}>
-                <h2>{tittel || 'Eksempel'}</h2>
-                <ActionButton title="Nullstill endringer" onClick={onResetClick} icon={<Reset />} />
-                <ActionButton
-                    title={fullscreen ? 'Lukk fullskjerm' : 'Åpne i fullskjerm'}
-                    onClick={onFullscreenClick}
-                    icon={fullscreen ? <FullscreenExit /> : <FullscreenEnter />}
-                />
+                <h2>{tittel ?? 'CODE'}</h2>
+                <ActionButton title="Reset changes" onClick={onResetClick} icon={<Reset />} />
             </header>
             <Draggable
                 height={height}
-                fullscreen={fullscreen}
+                fullscreen={true}
                 left={(width) => (
                     <div className={css.panel} style={{ width: `${width}%` }}>
                         {layout === 'tabs' && (
